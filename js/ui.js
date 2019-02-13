@@ -30,6 +30,7 @@ const ui = (() => {
 
 		var began;
 		var duration;
+		var rate;
 
 		var display;
 
@@ -47,7 +48,7 @@ const ui = (() => {
 		function update(time) {
 			time = time || Date.now();
 
-			var delta = (time - began)*2;
+			var delta = (time - began)*rate;
 
 			var progress = Math.floor(delta / 1000);
 			var percentage = Math.min(delta / duration, 1);
@@ -69,11 +70,12 @@ const ui = (() => {
 		}
 
 		return {
-			start(time, length) {
+			start(time, length, rateness) {
 				active = true;
 				
 				began = time;
 				duration = length;
+				rate = rateness;
 
 				loop();
 			},
