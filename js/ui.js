@@ -70,12 +70,12 @@ const ui = (() => {
 		}
 
 		return {
-			start(time, length, rateness) {
+			start(time, length, songSpeedMultiplier) {
 				active = true;
 				
 				began = time;
 				duration = length;
-				rate = rateness;
+				rate = songSpeedMultiplier;
 
 				loop();
 			},
