@@ -95,7 +95,9 @@ body {
 	margin: 0 8px;
 }
 
-
+#speed {
+	color: white;
+}
 
 /* Progress */
 
