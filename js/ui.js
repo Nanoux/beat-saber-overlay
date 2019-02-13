@@ -128,7 +128,7 @@ const ui = (() => {
 
 			difficulty.innerText = data.difficulty;
 			bpm.innerText = `${format(data.songBPM)} BPM`;
-			speed.innerText = `${format(data2.songSpeedMultiplier)}%;
+			speed.innerText = `${format(data2.songSpeedMultiplier)}% Speed';
 
 			timer.start(Date.now(), data.length);
 		}
