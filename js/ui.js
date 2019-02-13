@@ -47,7 +47,7 @@ const ui = (() => {
 		function update(time) {
 			time = time || Date.now();
 
-			var delta = time - began;
+			var delta = (time - began)*2;
 
 			var progress = Math.floor(delta / 1000);
 			var percentage = Math.min(delta / duration, 1);
