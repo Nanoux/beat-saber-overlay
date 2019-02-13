@@ -51,7 +51,7 @@ const ui = (() => {
 			var delta = (time - began)*rate;
 
 			var progress = Math.floor(delta / 1000);
-			var percentage = Math.min(delta / (duration/rate), 1);
+			var percentage = Math.min(delta / (duration*rate), 1);
 
 			bar.setAttribute("style", `stroke-dashoffset: ${(1 - percentage) * circumference}px`);
 
