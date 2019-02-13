@@ -135,7 +135,7 @@ const ui = (() => {
 			bpm.innerText = `${format(data.songBPM)} BPM`;
 			speed.innerText = mul + "% Speed";
 
-			timer.start(Date.now(), data.length);
+			timer.start(Date.now(), data.length,data2.songSpeedMultiplier);
 		}
 	})();
 
