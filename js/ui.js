@@ -119,6 +119,9 @@ const ui = (() => {
 			if (data.difficulty === "ExpertPlus") {
 				data.difficulty = "Expert+";
 			}
+			
+			var mul = data2.songSpeedMultiplier * 100;
+			mul.toFixed(0);
 
 			cover.setAttribute("src", `data:image/png;base64,${data.songCover}`);
 
@@ -128,7 +131,7 @@ const ui = (() => {
 
 			difficulty.innerText = data.difficulty;
 			bpm.innerText = `${format(data.songBPM)} BPM`;
-			speed.innerText = data2.songSpeedMultiplier;
+			speed.innerText = mul;
 
 			timer.start(Date.now(), data.length);
 		}
