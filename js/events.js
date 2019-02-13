@@ -10,8 +10,8 @@ const events = {
 	},
 
 	songStart(data, time) {
-		ui.beatmap(data.beatmap, time);
-		ui.performance(data.performance, data.mod);
+		ui.beatmap(data.beatmap, time, data.mod);
+		ui.performance(data.performance);
 		ui.show();
 	},
 
