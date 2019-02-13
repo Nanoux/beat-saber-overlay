@@ -101,6 +101,7 @@ const ui = (() => {
 
 		var difficulty = document.getElementById("difficulty");
 		var bpm = document.getElementById("bpm");
+		var speed = document.getElementById("speed");
 
 		function format(number) {
 			if (Number.isNaN(number)) {
@@ -127,6 +128,7 @@ const ui = (() => {
 
 			difficulty.innerText = data.difficulty;
 			bpm.innerText = `${format(data.songBPM)} BPM`;
+			speed.innerText = data.songSpeedMultiplier;
 
 			timer.start(Date.now(), data.length);
 		}
