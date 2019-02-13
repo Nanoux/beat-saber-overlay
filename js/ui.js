@@ -121,7 +121,7 @@ const ui = (() => {
 			}
 			
 			var mul = data2.songSpeedMultiplier * 100;
-			mul.toFixed(0);
+			mul = mul.toFixed(0);
 
 			cover.setAttribute("src", `data:image/png;base64,${data.songCover}`);
 
