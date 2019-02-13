@@ -26,7 +26,7 @@ const events = {
 	},
 
 	resume(data, time) {
-		ui.timer.start(data.beatmap.start + (Date.now() - time));
+		ui.timer.start(data.beatmap.start + (Date.now() - time), data.beatmap.length);
 	},
 
 	menu() {
