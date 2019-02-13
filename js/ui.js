@@ -75,7 +75,7 @@ const ui = (() => {
 				
 				began = time;
 				duration = length;
-				rate = songSpeedMultiplier;
+				rate = songSpeedMultiplier || rate || 1;
 
 				loop();
 			},
