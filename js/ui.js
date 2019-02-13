@@ -115,7 +115,7 @@ const ui = (() => {
 			return number.toString();
 		}
 
-		return (data, time) => {
+		return (data, time, data2) => {
 			if (data.difficulty === "ExpertPlus") {
 				data.difficulty = "Expert+";
 			}
@@ -128,7 +128,7 @@ const ui = (() => {
 
 			difficulty.innerText = data.difficulty;
 			bpm.innerText = `${format(data.songBPM)} BPM`;
-			speed.innerText = data.songSpeedMultiplier;
+			speed.innerText = data2.songSpeedMultiplier;
 
 			timer.start(Date.now(), data.length);
 		}
